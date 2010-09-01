@@ -13,7 +13,7 @@ INSTALLATION
       
 2. Install this extension
 
-      script/extension install git@github.com:bernsno/spree-print-invoice.git
+      script/extension install git://github.com/bernsno/spree-print-invoice.git
 
 3. Make sure you have the required gems
 
