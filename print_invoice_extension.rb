@@ -13,7 +13,13 @@ class PrintInvoiceExtension < Spree::Extension
   def activate
 
     Admin::OrdersController.class_eval do
-      show.success.wants.pdf { render :layout => false} #, :template => 'admin/orders/show.pdf.prawn'
+      show.success.wants.pdf do
+        if params[:gift]
+          render :template => "admin/orders/gift", :layout => false
+        else
+          render :layout => false
+        end
+      end
     end
 
   end
