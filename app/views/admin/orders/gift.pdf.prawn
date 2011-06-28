@@ -11,7 +11,7 @@ font "Helvetica", :style => :bold, :size => 14
 text "Order Number: #{@order.number}"
 
 font "Helvetica", :size => 8
-text @order.created_at.to_s(:long)
+text @order.completed_at.to_s(:long)
 
 # Address Stuff
 bounding_box [0,550], :width => 540 do
